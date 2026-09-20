@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Your Life, In Receipts - An interactive biographical exploration of 2,461 receipts and 36,477 Spotify streams from 2015 to 2018.">
+  <meta name="theme-color" content="#0a0d14">
+  <title>Your Life, In Receipts | Financial & Music Journey (2015–2018)</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Core Stylesheet -->
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+
+  <!-- Sticky Top Navigation -->
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <a href="#" class="brand-logo" data-view-target="chapters">
+        <span class="logo-badge">RECEIPTS</span>
+        <span>YOUR LIFE, IN RECEIPTS</span>
+      </a>
+
+      <nav>
+        <ul class="nav-links">
+          <li>
+            <button class="nav-item-btn active" data-view-target="chapters">
+              <span>📖</span> Chapters
+            </button>
+          </li>
+          <li>
+            <button class="nav-item-btn" data-view-target="explorer">
+              <span>🧾</span> Explorer & Search
+            </button>
+          </li>
+          <li>
+            <button class="nav-item-btn" data-view-target="connections">
+              <span>🌐</span> Connection Graph
+            </button>
+          </li>
+          <li>
+            <button class="nav-item-btn" data-view-target="patterns">
+              <span>🔬</span> Pattern Lab
+            </button>
+          </li>
+          <li>
+            <button class="nav-item-btn" data-view-target="journey">
+              <span>🗺️</span> Digital Journey
+            </button>
+          </li>
+          <li>
+            <button class="nav-item-btn" data-view-target="multifacet">
+              <span>🛡️</span> Multi-Facet Portal
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="container">
+    <!-- Hero Banner Section -->
+    <section class="hero-section" id="hero-container">
+      <!-- Injected by HeroBanner.js -->
+    </section>
+
+    <!-- Center Tab Switcher for Quick Mobile / View Toggling -->
+    <div class="view-nav">
+      <button class="tab-btn active" data-view-target="chapters">
+        <span>📖</span> Life Chapters
+      </button>
+      <button class="tab-btn" data-view-target="explorer">
+        <span>🧾</span> Receipt Explorer
+      </button>
+      <button class="tab-btn" data-view-target="connections">
+        <span>🌐</span> Connections
+      </button>
+      <button class="tab-btn" data-view-target="patterns">
+        <span>🔬</span> Insights Lab
+      </button>
+      <button class="tab-btn" data-view-target="journey">
+        <span>🗺️</span> Commuter Journey
+      </button>
+      <button class="tab-btn" data-view-target="multifacet">
+        <span>🛡️</span> Multi-Facet (10.2k)
+      </button>
+    </div>
+
+    <!-- Loading Spinner -->
+    <div id="loading-spinner" style="text-align: center; padding: 4rem 1rem;">
+      <div style="display: inline-block; width: 44px; height: 44px; border: 4px solid rgba(0,242,254,0.2); border-top-color: #00f2fe; border-radius: 50%; animation: spin 0.8s linear infinite;"></div>
+      <div style="margin-top: 1rem; color: var(--text-secondary); font-size: 0.95rem; font-weight: 600;">
+        Synthesizing 2,461 Receipts & 36,477 Spotify Streams...
+      </div>
+    </div>
+
+    <style>
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+    </style>
+
+    <!-- Dynamic View Containers -->
+    <section id="chapters-view" style="display: none;"></section>
+    <section id="explorer-view" style="display: none;"></section>
+    <section id="connections-view" style="display: none;"></section>
+    <section id="patterns-view" style="display: none;"></section>
+    <section id="journey-view" style="display: none;"></section>
+    <section id="multifacet-view" style="display: none;"></section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p style="font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">
+        YOUR LIFE, IN RECEIPTS — COMPETITION SUBMISSION
+      </p>
+      <p style="color: var(--text-muted); font-size: 0.8rem; margin-bottom: 0.5rem;">
+        Powered 100% by official datasets: <code>Daily Household Transactions.csv</code>, <code>spotify_history.csv</code> & <code>Augmented_IndiaTransactMultiFacet2024.csv</code>. Zero invented data.
+      </p>
+      <p style="color: var(--text-muted); font-size: 0.75rem;">
+        Frontend-only architecture • Zero Backend • Client-side Indexing & Analytics
+      </p>
+    </div>
+  </footer>
+
+  <!-- Application Bootstrap -->
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
